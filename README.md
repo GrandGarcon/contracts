@@ -2,16 +2,13 @@
 [![Common Coverage Status](https://codecov.io/gh/c-layer/contracts/graph/badge.svg)](https://codecov.io/gh/c-layer/contracts)
 
 
-# Compliance Layer SmartContracts
+# Assertion testing on  Compliance Layer SmartContracts using [scribble](https://docs.scribble.codes/) 
 
-Welcome to the C-Layer Ethereum monorepo.
+this repo is forked from the C-layer for creating an example for generating  annotated files for C-layer smart contracts and then using scribble to generate the instrumented code , this then can be input to the automated fuzzing analyzers ( oyente , 
+
 
 ## Purpose
-
-Provide an administrable layer over the Ethereum blockchain protocol.
-
-One of the foremost use case is the support of regulated asset classes and financial services.
-
+to cover the specification / property based testing in the 
 ## Content
 
 This repository is a monorepos of the different component of the projects.
@@ -26,11 +23,18 @@ Also all of the contracts functions  are  being audited using the [Consensys Scr
  
   there are following steps are needed to be completed in order to get the required analysis 
 
-  1. writing the statements corresponding to the expressions and the properties  that are to be evaluated in the function 
+  1. writing the statements corresponding to the expressions and the properties  that are to be evaluated in the function ( while fullfilling the conditions of the function not being pure view only , as mentioned in the documentation  ) . 
 
 
 
 # Requirements 
 
 Install the right version of node.js (between 10.0.0 to 12.0.0) / NPM .
+
+Install the eth-scribble as mentioned in the (placwe)[https://docs.scribble.codes/tool/installation]
+
+
+
+## Todo 
+  - integration of CI config to create docker job to run the instrumented code on the automated fuzzying tools 
 
